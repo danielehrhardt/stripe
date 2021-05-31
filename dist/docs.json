@@ -1,0 +1,3827 @@
+{
+  "api": {
+    "name": "StripePlugin",
+    "slug": "stripeplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "setPublishableKey",
+        "signature": "(opts: SetPublishableKeyOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "SetPublishableKeyOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "SetPublishableKeyOptions"
+        ],
+        "slug": "setpublishablekey"
+      },
+      {
+        "name": "createCardToken",
+        "signature": "(card: CardTokenRequest) => Promise<CardTokenResponse>",
+        "parameters": [
+          {
+            "name": "card",
+            "docs": "",
+            "type": "CardTokenRequest"
+          }
+        ],
+        "returns": "Promise<CardTokenResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "CardTokenResponse",
+          "CardTokenRequest"
+        ],
+        "slug": "createcardtoken"
+      },
+      {
+        "name": "createBankAccountToken",
+        "signature": "(bankAccount: BankAccountTokenRequest) => Promise<BankAccountTokenResponse>",
+        "parameters": [
+          {
+            "name": "bankAccount",
+            "docs": "",
+            "type": "BankAccountTokenRequest"
+          }
+        ],
+        "returns": "Promise<BankAccountTokenResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "BankAccountTokenResponse",
+          "BankAccountTokenRequest"
+        ],
+        "slug": "createbankaccounttoken"
+      },
+      {
+        "name": "isApplePayAvailable",
+        "signature": "() => Promise<AvailabilityResponse>",
+        "parameters": [],
+        "returns": "Promise<AvailabilityResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "AvailabilityResponse"
+        ],
+        "slug": "isapplepayavailable"
+      },
+      {
+        "name": "payWithApplePay",
+        "signature": "(options: { applePayOptions: ApplePayOptions; }) => Promise<ApplePayResponse>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ applePayOptions: ApplePayOptions; }"
+          }
+        ],
+        "returns": "Promise<ApplePayResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ApplePayResponse",
+          "ApplePayOptions"
+        ],
+        "slug": "paywithapplepay"
+      },
+      {
+        "name": "cancelApplePay",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "cancelapplepay"
+      },
+      {
+        "name": "finalizeApplePayTransaction",
+        "signature": "(opts: FinalizeApplePayTransactionOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "FinalizeApplePayTransactionOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "FinalizeApplePayTransactionOptions"
+        ],
+        "slug": "finalizeapplepaytransaction"
+      },
+      {
+        "name": "isGooglePayAvailable",
+        "signature": "() => Promise<AvailabilityResponse>",
+        "parameters": [],
+        "returns": "Promise<AvailabilityResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "AvailabilityResponse"
+        ],
+        "slug": "isgooglepayavailable"
+      },
+      {
+        "name": "payWithGooglePay",
+        "signature": "(opts: { googlePayOptions: GooglePayOptions; }) => Promise<GooglePayResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "{ googlePayOptions: GooglePayOptions; }"
+          }
+        ],
+        "returns": "Promise<GooglePayResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "GooglePayResponse",
+          "GooglePayOptions"
+        ],
+        "slug": "paywithgooglepay"
+      },
+      {
+        "name": "customizePaymentAuthUI",
+        "signature": "(opts: any) => Promise<void>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "any"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "customizepaymentauthui"
+      },
+      {
+        "name": "presentPaymentOptions",
+        "signature": "() => Promise<PresentPaymentOptionsResponse>",
+        "parameters": [],
+        "returns": "Promise<PresentPaymentOptionsResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PresentPaymentOptionsResponse"
+        ],
+        "slug": "presentpaymentoptions"
+      },
+      {
+        "name": "validateCardNumber",
+        "signature": "(opts: ValidateCardNumberOptions) => Promise<ValidityResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "ValidateCardNumberOptions"
+          }
+        ],
+        "returns": "Promise<ValidityResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ValidityResponse",
+          "ValidateCardNumberOptions"
+        ],
+        "slug": "validatecardnumber"
+      },
+      {
+        "name": "validateExpiryDate",
+        "signature": "(opts: ValidateExpiryDateOptions) => Promise<ValidityResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "ValidateExpiryDateOptions"
+          }
+        ],
+        "returns": "Promise<ValidityResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ValidityResponse",
+          "ValidateExpiryDateOptions"
+        ],
+        "slug": "validateexpirydate"
+      },
+      {
+        "name": "validateCVC",
+        "signature": "(opts: ValidateCVCOptions) => Promise<ValidityResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "ValidateCVCOptions"
+          }
+        ],
+        "returns": "Promise<ValidityResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ValidityResponse",
+          "ValidateCVCOptions"
+        ],
+        "slug": "validatecvc"
+      },
+      {
+        "name": "identifyCardBrand",
+        "signature": "(opts: IdentifyCardBrandOptions) => Promise<CardBrandResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "IdentifyCardBrandOptions"
+          }
+        ],
+        "returns": "Promise<CardBrandResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "CardBrandResponse",
+          "IdentifyCardBrandOptions"
+        ],
+        "slug": "identifycardbrand"
+      },
+      {
+        "name": "confirmPaymentIntent",
+        "signature": "(opts: ConfirmPaymentIntentOptions) => Promise<ConfirmPaymentIntentResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "ConfirmPaymentIntentOptions"
+          }
+        ],
+        "returns": "Promise<ConfirmPaymentIntentResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ConfirmPaymentIntentResponse",
+          "ConfirmPaymentIntentOptions"
+        ],
+        "slug": "confirmpaymentintent"
+      },
+      {
+        "name": "confirmSetupIntent",
+        "signature": "(opts: ConfirmSetupIntentOptions) => Promise<ConfirmSetupIntentResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "ConfirmSetupIntentOptions"
+          }
+        ],
+        "returns": "Promise<ConfirmSetupIntentResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "ConfirmSetupIntentResponse",
+          "ConfirmSetupIntentOptions"
+        ],
+        "slug": "confirmsetupintent"
+      },
+      {
+        "name": "initCustomerSession",
+        "signature": "(opts: InitCustomerSessionParams) => Promise<void>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "InitCustomerSessionParams"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "InitCustomerSessionParams"
+        ],
+        "slug": "initcustomersession"
+      },
+      {
+        "name": "customerPaymentMethods",
+        "signature": "() => Promise<CustomerPaymentMethodsResponse>",
+        "parameters": [],
+        "returns": "Promise<CustomerPaymentMethodsResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "CustomerPaymentMethodsResponse"
+        ],
+        "slug": "customerpaymentmethods"
+      },
+      {
+        "name": "setCustomerDefaultSource",
+        "signature": "(opts: { sourceId: string; type?: string; }) => Promise<CustomerPaymentMethodsResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "{ sourceId: string; type?: string | undefined; }"
+          }
+        ],
+        "returns": "Promise<CustomerPaymentMethodsResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "CustomerPaymentMethodsResponse"
+        ],
+        "slug": "setcustomerdefaultsource"
+      },
+      {
+        "name": "addCustomerSource",
+        "signature": "(opts: { sourceId: string; type?: string; }) => Promise<CustomerPaymentMethodsResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "{ sourceId: string; type?: string | undefined; }"
+          }
+        ],
+        "returns": "Promise<CustomerPaymentMethodsResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "CustomerPaymentMethodsResponse"
+        ],
+        "slug": "addcustomersource"
+      },
+      {
+        "name": "deleteCustomerSource",
+        "signature": "(opts: { sourceId: string; }) => Promise<CustomerPaymentMethodsResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "{ sourceId: string; }"
+          }
+        ],
+        "returns": "Promise<CustomerPaymentMethodsResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "CustomerPaymentMethodsResponse"
+        ],
+        "slug": "deletecustomersource"
+      },
+      {
+        "name": "createSourceToken",
+        "signature": "(opts: CreateSourceTokenOptions) => Promise<TokenResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "CreateSourceTokenOptions"
+          }
+        ],
+        "returns": "Promise<TokenResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "TokenResponse",
+          "CreateSourceTokenOptions"
+        ],
+        "slug": "createsourcetoken"
+      },
+      {
+        "name": "createPiiToken",
+        "signature": "(opts: CreatePiiTokenOptions) => Promise<TokenResponse>",
+        "parameters": [
+          {
+            "name": "opts",
+            "docs": "",
+            "type": "CreatePiiTokenOptions"
+          }
+        ],
+        "returns": "Promise<TokenResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "TokenResponse",
+          "CreatePiiTokenOptions"
+        ],
+        "slug": "createpiitoken"
+      },
+      {
+        "name": "createAccountToken",
+        "signature": "(account: AccountParams) => Promise<TokenResponse>",
+        "parameters": [
+          {
+            "name": "account",
+            "docs": "",
+            "type": "AccountParams"
+          }
+        ],
+        "returns": "Promise<TokenResponse>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "TokenResponse",
+          "AccountParams"
+        ],
+        "slug": "createaccounttoken"
+      }
+    ],
+    "properties": [],
+    "importObject": [
+      "Card",
+      "BankAccount",
+      "ApplePayDefinitions",
+      "GooglePayDefinitions",
+      "HelperDefinitions",
+      "IntentDefinitions",
+      "PaymentDefinitions",
+      "IdempotencyKeyOpt",
+      "StripeAccountIdOpt",
+      "TokenResponse",
+      "TokenDefinitions",
+      "StripeDefinitions",
+      "SetPublishableKeyOptions",
+      "CardTokenRequest",
+      "CardTokenResponse",
+      "BankAccountTokenRequest",
+      "BankAccountTokenResponse"
+    ]
+  },
+  "interfaces": [
+    {
+      "name": "CardTokenResponse",
+      "slug": "cardtokenresponse",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "card",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "Card"
+          ],
+          "type": "Card"
+        }
+      ],
+      "importObject": [
+        "Card",
+        "BankAccount",
+        "ApplePayDefinitions",
+        "GooglePayDefinitions",
+        "HelperDefinitions",
+        "IntentDefinitions",
+        "PaymentDefinitions",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "TokenResponse",
+        "TokenDefinitions",
+        "StripeDefinitions",
+        "StripePlugin",
+        "SetPublishableKeyOptions",
+        "CardTokenRequest",
+        "BankAccountTokenRequest",
+        "BankAccountTokenResponse"
+      ]
+    },
+    {
+      "name": "CardTokenRequest",
+      "slug": "cardtokenrequest",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "number",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "exp_month",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "exp_year",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "cvc",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "address_line1",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "address_line2",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "address_city",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "address_state",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "address_country",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "address_zip",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "currency",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "phone",
+          "tags": [],
+          "docs": "iOS only",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "email",
+          "tags": [],
+          "docs": "iOS only",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ],
+      "importObject": [
+        "Card",
+        "BankAccount",
+        "ApplePayDefinitions",
+        "GooglePayDefinitions",
+        "HelperDefinitions",
+        "IntentDefinitions",
+        "PaymentDefinitions",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "TokenResponse",
+        "TokenDefinitions",
+        "StripeDefinitions",
+        "StripePlugin",
+        "SetPublishableKeyOptions",
+        "CardTokenResponse",
+        "BankAccountTokenRequest",
+        "BankAccountTokenResponse"
+      ]
+    },
+    {
+      "name": "BankAccountTokenResponse",
+      "slug": "bankaccounttokenresponse",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "bank_account",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "BankAccount"
+          ],
+          "type": "BankAccount"
+        }
+      ],
+      "importObject": [
+        "Card",
+        "BankAccount",
+        "ApplePayDefinitions",
+        "GooglePayDefinitions",
+        "HelperDefinitions",
+        "IntentDefinitions",
+        "PaymentDefinitions",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "TokenResponse",
+        "TokenDefinitions",
+        "StripeDefinitions",
+        "StripePlugin",
+        "SetPublishableKeyOptions",
+        "CardTokenRequest",
+        "CardTokenResponse",
+        "BankAccountTokenRequest"
+      ]
+    },
+    {
+      "name": "BankAccountTokenRequest",
+      "slug": "bankaccounttokenrequest",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "country",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "currency",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "account_holder_name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "account_holder_type",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "routing_number",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "account_number",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Card",
+        "BankAccount",
+        "ApplePayDefinitions",
+        "GooglePayDefinitions",
+        "HelperDefinitions",
+        "IntentDefinitions",
+        "PaymentDefinitions",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "TokenResponse",
+        "TokenDefinitions",
+        "StripeDefinitions",
+        "StripePlugin",
+        "SetPublishableKeyOptions",
+        "CardTokenRequest",
+        "CardTokenResponse",
+        "BankAccountTokenResponse"
+      ]
+    },
+    {
+      "name": "ApplePayResponse",
+      "slug": "applepayresponse",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "token",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "AvailabilityResponse",
+        "FinalizeApplePayTransactionOptions",
+        "ApplePayDefinitions",
+        "ApplePayItem",
+        "ApplePayOptions"
+      ]
+    },
+    {
+      "name": "ApplePayOptions",
+      "slug": "applepayoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "merchantId",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "currency",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "items",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "ApplePayItem"
+          ],
+          "type": "ApplePayItem[]"
+        },
+        {
+          "name": "billingEmailAddress",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "billingName",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "billingPhoneNumber",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "billingPhoneticName",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "billingPostalAddress",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "shippingEmailAddress",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "shippingName",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "shippingPhoneNumber",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "shippingPhoneticName",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "shippingPostalAddress",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        }
+      ],
+      "importObject": [
+        "AvailabilityResponse",
+        "FinalizeApplePayTransactionOptions",
+        "ApplePayDefinitions",
+        "ApplePayResponse",
+        "ApplePayItem"
+      ]
+    },
+    {
+      "name": "ApplePayItem",
+      "slug": "applepayitem",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "label",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "amount",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | number"
+        }
+      ],
+      "importObject": [
+        "AvailabilityResponse",
+        "FinalizeApplePayTransactionOptions",
+        "ApplePayDefinitions",
+        "ApplePayResponse",
+        "ApplePayOptions"
+      ]
+    },
+    {
+      "name": "GooglePayResponse",
+      "slug": "googlepayresponse",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "success",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "token",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "{ apiVersionMinor: number; apiVersion: number; paymentMethodData: { description: string; tokenizationData: { type: string; token: string; }; type: string; info: { cardNetwork: string; cardDetails: string; billingAddress?: { countryCode: string; postalCode: string; name: string; } | undefined; }; }; shippingAddress?: { address3: string; sortingCode: string; address2: string; countryCode: string; address1: string; postalCode: string; name: string; locality: string; administrativeArea: string; } | undefined; email?: string | undefined; }"
+        }
+      ],
+      "importObject": [
+        "AvailabilityResponse",
+        "GooglePayBillingAddressFormat",
+        "GooglePayAuthMethod",
+        "GooglePayPriceStatus",
+        "GooglePayDefinitions",
+        "GooglePayOptions"
+      ]
+    },
+    {
+      "name": "GooglePayOptions",
+      "slug": "googlepayoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "merchantName",
+          "tags": [],
+          "docs": "Merchant name encoded as UTF-8.\nMerchant name is rendered in the payment sheet.\nIn TEST environment, or if a merchant isn't recognized, a “Pay Unverified Merchant” message is displayed in the payment sheet.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "totalPrice",
+          "tags": [],
+          "docs": "Total monetary value of the transaction with an optional decimal precision of two decimal places.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "totalPriceStatus",
+          "tags": [],
+          "docs": "The status of the total price used",
+          "complexTypes": [
+            "GooglePayPriceStatus"
+          ],
+          "type": "GooglePayPriceStatus"
+        },
+        {
+          "name": "totalPriceLabel",
+          "tags": [],
+          "docs": "Custom label for the total price within the display items.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "checkoutOption",
+          "tags": [],
+          "docs": "Affects the submit button text displayed in the Google Pay payment sheet.",
+          "complexTypes": [],
+          "type": "'DEFAULT' | 'COMPLETE_IMMEDIATE_PURCHASE' | undefined"
+        },
+        {
+          "name": "transactionId",
+          "tags": [],
+          "docs": "A unique ID that identifies a transaction attempt.\nMerchants may use an existing ID or generate a specific one for Google Pay transaction attempts.\nThis field is required when you send callbacks to the Google Transaction Events API.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "currencyCode",
+          "tags": [],
+          "docs": "ISO 4217 alphabetic currency code.",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "countryCode",
+          "tags": [],
+          "docs": "ISO 3166-1 alpha-2 country code where the transaction is processed.\nThis is required for merchants based in European Economic Area (EEA) countries.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "allowedAuthMethods",
+          "tags": [],
+          "docs": "Fields supported to authenticate a card transaction.",
+          "complexTypes": [
+            "GooglePayAuthMethod"
+          ],
+          "type": "GooglePayAuthMethod[]"
+        },
+        {
+          "name": "allowedCardNetworks",
+          "tags": [],
+          "docs": "One or more card networks that you support, also supported by the Google Pay API.",
+          "complexTypes": [],
+          "type": "('AMEX' | 'DISCOVER' | 'INTERAC' | 'JCB' | 'MASTERCARD' | 'VISA')[]"
+        },
+        {
+          "name": "allowPrepaidCards",
+          "tags": [],
+          "docs": "Set to false if you don't support prepaid cards.\nDefault: The prepaid card class is supported for the card networks specified.",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "emailRequired",
+          "tags": [],
+          "docs": "Set to true to request an email address.",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "billingAddressRequired",
+          "tags": [],
+          "docs": "Set to true if you require a billing address.\nA billing address should only be requested if it's required to process the transaction.\nAdditional data requests can increase friction in the checkout process and lead to a lower conversion rate.",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "billingAddressParameters",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "GooglePayBillingAddressFormat"
+          ],
+          "type": "{ format?: GooglePayBillingAddressFormat | undefined; phoneNumberRequired?: boolean | undefined; } | undefined"
+        },
+        {
+          "name": "shippingAddressRequired",
+          "tags": [],
+          "docs": "Set to true to request a full shipping address.",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "shippingAddressParameters",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "{ allowedCountryCodes?: string[] | undefined; phoneNumberRequired?: boolean | undefined; } | undefined"
+        }
+      ],
+      "importObject": [
+        "AvailabilityResponse",
+        "GooglePayBillingAddressFormat",
+        "GooglePayAuthMethod",
+        "GooglePayPriceStatus",
+        "GooglePayDefinitions",
+        "GooglePayResponse"
+      ]
+    },
+    {
+      "name": "ConfirmPaymentIntentResponse",
+      "slug": "confirmpaymentintentresponse",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "amount",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "capture_method",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "client_secret",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "confirmation_method",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "created",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "currency",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "cad",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "livemode",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "object",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "payment_method",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "PaymentMethod"
+          ],
+          "type": "PaymentMethod"
+        },
+        {
+          "name": "payment_method_types",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string[]"
+        },
+        {
+          "name": "status",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "PaymentMethod"
+      ]
+    },
+    {
+      "name": "ConfirmPaymentIntentOptions",
+      "slug": "confirmpaymentintentoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "setupFutureUsage",
+          "tags": [],
+          "docs": "Indicates that you intend to make future payments with this PaymentIntent's payment method.\n\nIf present, the payment method used with this PaymentIntent can be [attached](https://stripe.com/docs/api/payment_methods/attach) to a Customer, even after the transaction completes.\n\nUse `on_session` if you intend to only reuse the payment method when your customer is present in your checkout flow. Use `off_session` if your customer may or may not be in your checkout flow.\n\nStripe uses `setup_future_usage` to dynamically optimize your payment flow and comply with regional legislation and network rules. For example, if your customer is impacted by [SCA](https://stripe.com/docs/strong-customer-authentication), using `off_session` will ensure that they are authenticated while processing this PaymentIntent. You will then be able to collect [off-session payments](https://stripe.com/docs/payments/cards/charging-saved-cards#off-session-payments-with-saved-cards) for this customer.\n\nIf `setup_future_usage` is already set and you are performing a request using a publishable key, you may only update the value from `on_session` to `off_session`.",
+          "complexTypes": [],
+          "type": "'on_session' | 'off_session' | undefined"
+        },
+        {
+          "name": "saveMethod",
+          "tags": [],
+          "docs": "Whether you intend to save the payment method to the customer's account after this payment",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "applePayOptions",
+          "tags": [],
+          "docs": "If provided, the payment intent will be confirmed using Apple Pay",
+          "complexTypes": [
+            "ApplePayOptions"
+          ],
+          "type": "ApplePayOptions"
+        },
+        {
+          "name": "googlePayOptions",
+          "tags": [],
+          "docs": "If provided, the payment intent will be confirmed using Google Pay",
+          "complexTypes": [
+            "GooglePayOptions"
+          ],
+          "type": "GooglePayOptions"
+        }
+      ],
+      "importObject": [
+        "ApplePayOptions",
+        "CommonIntentOptions",
+        "GooglePayOptions"
+      ]
+    },
+    {
+      "name": "ConfirmSetupIntentResponse",
+      "slug": "confirmsetupintentresponse",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "created",
+          "tags": [],
+          "docs": "Unix timestamp representing creation time",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "id",
+          "tags": [],
+          "docs": "Setup intent ID",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "isLiveMode",
+          "tags": [],
+          "docs": "Whether the setup intent was created in live mode",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "paymentMethodId",
+          "tags": [],
+          "docs": "Payment method ID",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "status",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "usage",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "CommonIntentOptions",
+        "ConfirmSetupIntentOptions"
+      ]
+    },
+    {
+      "name": "ConfirmSetupIntentOptions",
+      "slug": "confirmsetupintentoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "CommonIntentOptions",
+        "ConfirmSetupIntentResponse"
+      ]
+    },
+    {
+      "name": "TokenResponse",
+      "slug": "tokenresponse",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "id",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "created",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "Date"
+          ],
+          "type": "Date"
+        }
+      ],
+      "importObject": [
+        "PaymentMethod",
+        "AvailabilityResponse",
+        "StripeAccountIdOpt",
+        "IdempotencyKeyOpt",
+        "CustomerPaymentMethodsResponse"
+      ]
+    },
+    {
+      "name": "Date",
+      "slug": "date",
+      "docs": "Enables basic storage and retrieval of dates and times.",
+      "tags": [],
+      "methods": [
+        {
+          "name": "toString",
+          "signature": "() => string",
+          "parameters": [],
+          "returns": "string",
+          "tags": [],
+          "docs": "Returns a string representation of a date. The format of the string depends on the locale.",
+          "complexTypes": [],
+          "slug": "tostring"
+        },
+        {
+          "name": "toDateString",
+          "signature": "() => string",
+          "parameters": [],
+          "returns": "string",
+          "tags": [],
+          "docs": "Returns a date as a string value.",
+          "complexTypes": [],
+          "slug": "todatestring"
+        },
+        {
+          "name": "toTimeString",
+          "signature": "() => string",
+          "parameters": [],
+          "returns": "string",
+          "tags": [],
+          "docs": "Returns a time as a string value.",
+          "complexTypes": [],
+          "slug": "totimestring"
+        },
+        {
+          "name": "toLocaleString",
+          "signature": "() => string",
+          "parameters": [],
+          "returns": "string",
+          "tags": [],
+          "docs": "Returns a value as a string value appropriate to the host environment's current locale.",
+          "complexTypes": [],
+          "slug": "tolocalestring"
+        },
+        {
+          "name": "toLocaleDateString",
+          "signature": "() => string",
+          "parameters": [],
+          "returns": "string",
+          "tags": [],
+          "docs": "Returns a date as a string value appropriate to the host environment's current locale.",
+          "complexTypes": [],
+          "slug": "tolocaledatestring"
+        },
+        {
+          "name": "toLocaleTimeString",
+          "signature": "() => string",
+          "parameters": [],
+          "returns": "string",
+          "tags": [],
+          "docs": "Returns a time as a string value appropriate to the host environment's current locale.",
+          "complexTypes": [],
+          "slug": "tolocaletimestring"
+        },
+        {
+          "name": "valueOf",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Returns the stored time value in milliseconds since midnight, January 1, 1970 UTC.",
+          "complexTypes": [],
+          "slug": "valueof"
+        },
+        {
+          "name": "getTime",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the time value in milliseconds.",
+          "complexTypes": [],
+          "slug": "gettime"
+        },
+        {
+          "name": "getFullYear",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the year, using local time.",
+          "complexTypes": [],
+          "slug": "getfullyear"
+        },
+        {
+          "name": "getUTCFullYear",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the year using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "getutcfullyear"
+        },
+        {
+          "name": "getMonth",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the month, using local time.",
+          "complexTypes": [],
+          "slug": "getmonth"
+        },
+        {
+          "name": "getUTCMonth",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the month of a Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "getutcmonth"
+        },
+        {
+          "name": "getDate",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the day-of-the-month, using local time.",
+          "complexTypes": [],
+          "slug": "getdate"
+        },
+        {
+          "name": "getUTCDate",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the day-of-the-month, using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "getutcdate"
+        },
+        {
+          "name": "getDay",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the day of the week, using local time.",
+          "complexTypes": [],
+          "slug": "getday"
+        },
+        {
+          "name": "getUTCDay",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the day of the week using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "getutcday"
+        },
+        {
+          "name": "getHours",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the hours in a date, using local time.",
+          "complexTypes": [],
+          "slug": "gethours"
+        },
+        {
+          "name": "getUTCHours",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the hours value in a Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "getutchours"
+        },
+        {
+          "name": "getMinutes",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the minutes of a Date object, using local time.",
+          "complexTypes": [],
+          "slug": "getminutes"
+        },
+        {
+          "name": "getUTCMinutes",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the minutes of a Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "getutcminutes"
+        },
+        {
+          "name": "getSeconds",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the seconds of a Date object, using local time.",
+          "complexTypes": [],
+          "slug": "getseconds"
+        },
+        {
+          "name": "getUTCSeconds",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the seconds of a Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "getutcseconds"
+        },
+        {
+          "name": "getMilliseconds",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the milliseconds of a Date, using local time.",
+          "complexTypes": [],
+          "slug": "getmilliseconds"
+        },
+        {
+          "name": "getUTCMilliseconds",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the milliseconds of a Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "getutcmilliseconds"
+        },
+        {
+          "name": "getTimezoneOffset",
+          "signature": "() => number",
+          "parameters": [],
+          "returns": "number",
+          "tags": [],
+          "docs": "Gets the difference in minutes between the time on the local computer and Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "gettimezoneoffset"
+        },
+        {
+          "name": "setTime",
+          "signature": "(time: number) => number",
+          "parameters": [
+            {
+              "name": "time",
+              "docs": "A numeric value representing the number of elapsed milliseconds since midnight, January 1, 1970 GMT.",
+              "type": "number"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "time",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value representing the number of elapsed milliseconds since midnight, January 1, 1970 GMT.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the date and time value in the Date object.",
+          "complexTypes": [],
+          "slug": "settime"
+        },
+        {
+          "name": "setMilliseconds",
+          "signature": "(ms: number) => number",
+          "parameters": [
+            {
+              "name": "ms",
+              "docs": "A numeric value equal to the millisecond value.",
+              "type": "number"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "ms",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the millisecond value.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the milliseconds value in the Date object using local time.",
+          "complexTypes": [],
+          "slug": "setmilliseconds"
+        },
+        {
+          "name": "setUTCMilliseconds",
+          "signature": "(ms: number) => number",
+          "parameters": [
+            {
+              "name": "ms",
+              "docs": "A numeric value equal to the millisecond value.",
+              "type": "number"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "ms",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the millisecond value.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the milliseconds value in the Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "setutcmilliseconds"
+        },
+        {
+          "name": "setSeconds",
+          "signature": "(sec: number, ms?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "sec",
+              "docs": "A numeric value equal to the seconds value.",
+              "type": "number"
+            },
+            {
+              "name": "ms",
+              "docs": "A numeric value equal to the milliseconds value.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "sec",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the seconds value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "ms",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the milliseconds value.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the seconds value in the Date object using local time.",
+          "complexTypes": [],
+          "slug": "setseconds"
+        },
+        {
+          "name": "setUTCSeconds",
+          "signature": "(sec: number, ms?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "sec",
+              "docs": "A numeric value equal to the seconds value.",
+              "type": "number"
+            },
+            {
+              "name": "ms",
+              "docs": "A numeric value equal to the milliseconds value.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "sec",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the seconds value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "ms",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the milliseconds value.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the seconds value in the Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "setutcseconds"
+        },
+        {
+          "name": "setMinutes",
+          "signature": "(min: number, sec?: number | undefined, ms?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "min",
+              "docs": "A numeric value equal to the minutes value.",
+              "type": "number"
+            },
+            {
+              "name": "sec",
+              "docs": "A numeric value equal to the seconds value.",
+              "type": "number | undefined"
+            },
+            {
+              "name": "ms",
+              "docs": "A numeric value equal to the milliseconds value.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "min",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the minutes value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "sec",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the seconds value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "ms",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the milliseconds value.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the minutes value in the Date object using local time.",
+          "complexTypes": [],
+          "slug": "setminutes"
+        },
+        {
+          "name": "setUTCMinutes",
+          "signature": "(min: number, sec?: number | undefined, ms?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "min",
+              "docs": "A numeric value equal to the minutes value.",
+              "type": "number"
+            },
+            {
+              "name": "sec",
+              "docs": "A numeric value equal to the seconds value.",
+              "type": "number | undefined"
+            },
+            {
+              "name": "ms",
+              "docs": "A numeric value equal to the milliseconds value.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "min",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the minutes value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "sec",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the seconds value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "ms",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the milliseconds value.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the minutes value in the Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "setutcminutes"
+        },
+        {
+          "name": "setHours",
+          "signature": "(hours: number, min?: number | undefined, sec?: number | undefined, ms?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "hours",
+              "docs": "A numeric value equal to the hours value.",
+              "type": "number"
+            },
+            {
+              "name": "min",
+              "docs": "A numeric value equal to the minutes value.",
+              "type": "number | undefined"
+            },
+            {
+              "name": "sec",
+              "docs": "A numeric value equal to the seconds value.",
+              "type": "number | undefined"
+            },
+            {
+              "name": "ms",
+              "docs": "A numeric value equal to the milliseconds value.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "hours",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the hours value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "min",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the minutes value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "sec",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the seconds value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "ms",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the milliseconds value.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the hour value in the Date object using local time.",
+          "complexTypes": [],
+          "slug": "sethours"
+        },
+        {
+          "name": "setUTCHours",
+          "signature": "(hours: number, min?: number | undefined, sec?: number | undefined, ms?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "hours",
+              "docs": "A numeric value equal to the hours value.",
+              "type": "number"
+            },
+            {
+              "name": "min",
+              "docs": "A numeric value equal to the minutes value.",
+              "type": "number | undefined"
+            },
+            {
+              "name": "sec",
+              "docs": "A numeric value equal to the seconds value.",
+              "type": "number | undefined"
+            },
+            {
+              "name": "ms",
+              "docs": "A numeric value equal to the milliseconds value.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "hours",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the hours value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "min",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the minutes value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "sec",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the seconds value.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "ms",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the milliseconds value.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the hours value in the Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "setutchours"
+        },
+        {
+          "name": "setDate",
+          "signature": "(date: number) => number",
+          "parameters": [
+            {
+              "name": "date",
+              "docs": "A numeric value equal to the day of the month.",
+              "type": "number"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "date",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the day of the month.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the numeric day-of-the-month value of the Date object using local time.",
+          "complexTypes": [],
+          "slug": "setdate"
+        },
+        {
+          "name": "setUTCDate",
+          "signature": "(date: number) => number",
+          "parameters": [
+            {
+              "name": "date",
+              "docs": "A numeric value equal to the day of the month.",
+              "type": "number"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "date",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the day of the month.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the numeric day of the month in the Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "setutcdate"
+        },
+        {
+          "name": "setMonth",
+          "signature": "(month: number, date?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "month",
+              "docs": "A numeric value equal to the month. The value for January is 0, and other month values follow consecutively.",
+              "type": "number"
+            },
+            {
+              "name": "date",
+              "docs": "A numeric value representing the day of the month. If this value is not supplied, the value from a call to the getDate method is used.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "month",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the month. The value for January is 0, and other month values follow consecutively.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "date",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value representing the day of the month. If this value is not supplied, the value from a call to the getDate method is used.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the month value in the Date object using local time.",
+          "complexTypes": [],
+          "slug": "setmonth"
+        },
+        {
+          "name": "setUTCMonth",
+          "signature": "(month: number, date?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "month",
+              "docs": "A numeric value equal to the month. The value for January is 0, and other month values follow consecutively.",
+              "type": "number"
+            },
+            {
+              "name": "date",
+              "docs": "A numeric value representing the day of the month. If it is not supplied, the value from a call to the getUTCDate method is used.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "month",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the month. The value for January is 0, and other month values follow consecutively.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "date",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value representing the day of the month. If it is not supplied, the value from a call to the getUTCDate method is used.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the month value in the Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "setutcmonth"
+        },
+        {
+          "name": "setFullYear",
+          "signature": "(year: number, month?: number | undefined, date?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "year",
+              "docs": "A numeric value for the year.",
+              "type": "number"
+            },
+            {
+              "name": "month",
+              "docs": "A zero-based numeric value for the month (0 for January, 11 for December). Must be specified if numDate is specified.",
+              "type": "number | undefined"
+            },
+            {
+              "name": "date",
+              "docs": "A numeric value equal for the day of the month.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "year",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value for the year.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "month",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A zero-based numeric value for the month (0 for January, 11 for December). Must be specified if numDate is specified.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "date",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal for the day of the month.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the year of the Date object using local time.",
+          "complexTypes": [],
+          "slug": "setfullyear"
+        },
+        {
+          "name": "setUTCFullYear",
+          "signature": "(year: number, month?: number | undefined, date?: number | undefined) => number",
+          "parameters": [
+            {
+              "name": "year",
+              "docs": "A numeric value equal to the year.",
+              "type": "number"
+            },
+            {
+              "name": "month",
+              "docs": "A numeric value equal to the month. The value for January is 0, and other month values follow consecutively. Must be supplied if numDate is supplied.",
+              "type": "number | undefined"
+            },
+            {
+              "name": "date",
+              "docs": "A numeric value equal to the day of the month.",
+              "type": "number | undefined"
+            }
+          ],
+          "returns": "number",
+          "tags": [
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "year",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the year.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "month",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the month. The value for January is 0, and other month values follow consecutively. Must be supplied if numDate is supplied.",
+                  "kind": "text"
+                }
+              ]
+            },
+            {
+              "name": "param",
+              "text": [
+                {
+                  "text": "date",
+                  "kind": "parameterName"
+                },
+                {
+                  "text": " ",
+                  "kind": "space"
+                },
+                {
+                  "text": "A numeric value equal to the day of the month.",
+                  "kind": "text"
+                }
+              ]
+            }
+          ],
+          "docs": "Sets the year value in the Date object using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "setutcfullyear"
+        },
+        {
+          "name": "toUTCString",
+          "signature": "() => string",
+          "parameters": [],
+          "returns": "string",
+          "tags": [],
+          "docs": "Returns a date converted to a string using Universal Coordinated Time (UTC).",
+          "complexTypes": [],
+          "slug": "toutcstring"
+        },
+        {
+          "name": "toISOString",
+          "signature": "() => string",
+          "parameters": [],
+          "returns": "string",
+          "tags": [],
+          "docs": "Returns a date as a string value in ISO format.",
+          "complexTypes": [],
+          "slug": "toisostring"
+        },
+        {
+          "name": "toJSON",
+          "signature": "(key?: any) => string",
+          "parameters": [
+            {
+              "name": "key",
+              "docs": "",
+              "type": "any"
+            }
+          ],
+          "returns": "string",
+          "tags": [],
+          "docs": "Used by the JSON.stringify method to enable the transformation of an object's data for JavaScript Object Notation (JSON) serialization.",
+          "complexTypes": [],
+          "slug": "tojson"
+        }
+      ],
+      "properties": [],
+      "importObject": [
+        "eval",
+        "parseInt",
+        "parseFloat",
+        "isNaN",
+        "isFinite",
+        "decodeURI",
+        "decodeURIComponent",
+        "encodeURI",
+        "encodeURIComponent",
+        "escape",
+        "unescape",
+        "NaN",
+        "Infinity",
+        "Symbol",
+        "PropertyKey",
+        "PropertyDescriptor",
+        "PropertyDescriptorMap",
+        "Object",
+        "ObjectConstructor",
+        "Function",
+        "FunctionConstructor",
+        "ThisParameterType",
+        "OmitThisParameter",
+        "CallableFunction",
+        "NewableFunction",
+        "IArguments",
+        "String",
+        "StringConstructor",
+        "Boolean",
+        "BooleanConstructor",
+        "Number",
+        "NumberConstructor",
+        "TemplateStringsArray",
+        "ImportMeta",
+        "Math",
+        "DateConstructor",
+        "RegExpMatchArray",
+        "RegExpExecArray",
+        "RegExp",
+        "RegExpConstructor",
+        "Error",
+        "ErrorConstructor",
+        "EvalError",
+        "EvalErrorConstructor",
+        "RangeError",
+        "RangeErrorConstructor",
+        "ReferenceError",
+        "ReferenceErrorConstructor",
+        "SyntaxError",
+        "SyntaxErrorConstructor",
+        "TypeError",
+        "TypeErrorConstructor",
+        "URIError",
+        "URIErrorConstructor",
+        "JSON",
+        "ReadonlyArray",
+        "ConcatArray",
+        "Array",
+        "ArrayConstructor",
+        "TypedPropertyDescriptor",
+        "ClassDecorator",
+        "PropertyDecorator",
+        "MethodDecorator",
+        "ParameterDecorator",
+        "PromiseConstructorLike",
+        "PromiseLike",
+        "Promise",
+        "ArrayLike",
+        "Partial",
+        "Required",
+        "Readonly",
+        "Pick",
+        "Record",
+        "Exclude",
+        "Extract",
+        "Omit",
+        "NonNullable",
+        "Parameters",
+        "ConstructorParameters",
+        "ReturnType",
+        "InstanceType",
+        "Uppercase",
+        "Lowercase",
+        "Capitalize",
+        "Uncapitalize",
+        "ThisType",
+        "ArrayBuffer",
+        "ArrayBufferTypes",
+        "ArrayBufferLike",
+        "ArrayBufferConstructor",
+        "ArrayBufferView",
+        "DataView",
+        "DataViewConstructor",
+        "Int8Array",
+        "Int8ArrayConstructor",
+        "Uint8Array",
+        "Uint8ArrayConstructor",
+        "Uint8ClampedArray",
+        "Uint8ClampedArrayConstructor",
+        "Int16Array",
+        "Int16ArrayConstructor",
+        "Uint16Array",
+        "Uint16ArrayConstructor",
+        "Int32Array",
+        "Int32ArrayConstructor",
+        "Uint32Array",
+        "Uint32ArrayConstructor",
+        "Float32Array",
+        "Float32ArrayConstructor",
+        "Float64Array",
+        "Float64ArrayConstructor",
+        "Intl"
+      ]
+    },
+    {
+      "name": "ThreeDeeSecureParams",
+      "slug": "threedeesecureparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "amount",
+          "tags": [],
+          "docs": "Amount",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "currency",
+          "tags": [],
+          "docs": "Currency code",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "returnURL",
+          "tags": [],
+          "docs": "URL to redirect to after successfully verifying the card",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "card",
+          "tags": [],
+          "docs": "Card source ID",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "GiroPayParams",
+      "slug": "giropayparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "amount",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "returnURL",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "statementDescriptor",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "iDEALParams",
+      "slug": "idealparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "amount",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "returnURL",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "statementDescriptor",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "bank",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "SEPADebitParams",
+      "slug": "sepadebitparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "iban",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "addressLine1",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "city",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "postalCode",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SofortParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "SofortParams",
+      "slug": "sofortparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "amount",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "returnURL",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "country",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "statementDescriptor",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "AlipayParams",
+      "slug": "alipayparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "amount",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "currency",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "returnURL",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "AlipayReusableParams",
+      "slug": "alipayreusableparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "currency",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "returnURL",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "P24Params",
+      "slug": "p24params",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "amount",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "currency",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "name",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "returnURL",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "VisaCheckoutParams",
+      "slug": "visacheckoutparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "callId",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "AccountParams",
+      "slug": "accountparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "tosShownAndAccepted",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean"
+        },
+        {
+          "name": "legalEntity",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "CompanyLegalEntityParams",
+            "IndividualLegalEntityParams"
+          ],
+          "type": "CompanyLegalEntityParams | IndividualLegalEntityParams"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "CompanyLegalEntityParams",
+      "slug": "companylegalentityparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "type",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "'company' | undefined"
+        },
+        {
+          "name": "name",
+          "tags": [],
+          "docs": "The company’s legal name.\n\n[account.company.name](https://stripe.com/docs/api/tokens/create_account#create_account_token-account-company-name)",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "owners_provided",
+          "tags": [],
+          "docs": "Whether the company’s owners have been provided. Set this\nBoolean to `true` after creating all the company’s owners with the\n[Persons API](https://stripe.com/docs/api/persons) for accounts with a\n`relationship.owner` requirement.\n\n[account.company.owners_provided](https://stripe.com/docs/api/tokens/create_account#create_account_token-account-company-owners_provided)",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "directors_provided",
+          "tags": [],
+          "docs": "Whether the company’s directors have been provided. Set\nthis Boolean to `true` after creating all the company’s directors with the\n[Persons API](https://stripe.com/docs/api/persons) for accounts with a\n`relationship.director` requirement. This value is not automatically set to\n`true` after creating directors, so it needs to be updated to indicate all\ndirectors have been provided.\n\n[account.company.directors_provided](https://stripe.com/docs/api/tokens/create_account#create_account_token-account-company-directors_provided)",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "executives_provided",
+          "tags": [],
+          "docs": "Whether the company’s executives have been provided.\nSet this Boolean to `true` after creating all the company’s executives with the\n[Persons API](https://stripe.com/docs/api/persons) for accounts with a\n`relationship.executive` requirement.\n\n[account.company.executives_provided](https://stripe.com/docs/api/tokens/create_account#create_account_token-account-company-executives_provided)",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "tax_id",
+          "tags": [],
+          "docs": "The business ID number of the company, as appropriate for the\ncompany’s country. (Examples are an Employer ID Number in the U.S.,\na Business Number in Canada, or a Company Number in the UK.)\n\n[account.company.tax_id](https://stripe.com/docs/api/tokens/create_account#create_account_token-account-company-tax_id)",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "tax_id_registrar",
+          "tags": [],
+          "docs": "The jurisdiction in which the `tax_id` is registered\n(Germany-based companies only).\n\n[account.company.tax_id_registrar](https://stripe.com/docs/api/tokens/create_account#create_account_token-account-company-tax_id_registrar)",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "vat_id",
+          "tags": [],
+          "docs": "The VAT number of the company.\n\n[account.company.vat_id](https://stripe.com/docs/api/tokens/create_account#create_account_token-account-company-vat_id)",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "phone",
+          "tags": [],
+          "docs": "The company’s phone number (used for verification).",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "IndividualLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    },
+    {
+      "name": "IndividualLegalEntityParams",
+      "slug": "individuallegalentityparams",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "type",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "'individual'"
+        },
+        {
+          "name": "first_name",
+          "tags": [],
+          "docs": "The individual’s first name.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "last_name",
+          "tags": [],
+          "docs": "The individual’s last name.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "email",
+          "tags": [],
+          "docs": "The individual’s email.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "gender",
+          "tags": [],
+          "docs": "The individual’s gender (International regulations require either “male” or “female”).",
+          "complexTypes": [],
+          "type": "'male' | 'female' | undefined"
+        },
+        {
+          "name": "id_number",
+          "tags": [],
+          "docs": "The government-issued ID number of the individual, as appropriate\nfor the representative’s country. (Examples are a Social Security Number in the\nU.S., or a Social Insurance Number in Canada). Instead of the number itself, you\ncan also provide a PII token.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "phone",
+          "tags": [],
+          "docs": "The individual’s phone number.",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "ssn_last4",
+          "tags": [],
+          "docs": "The last four digits of the individual’s Social Security Number (U.S. only).",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ],
+      "importObject": [
+        "Address",
+        "TokenResponse",
+        "IdempotencyKeyOpt",
+        "StripeAccountIdOpt",
+        "SourceType",
+        "TokenDefinitions",
+        "CreateSourceTokenOptions",
+        "CreatePiiTokenOptions",
+        "AccountParams",
+        "SourceParams",
+        "ThreeDeeSecureParams",
+        "GiroPayParams",
+        "iDEALParams",
+        "SEPADebitParams",
+        "SofortParams",
+        "AlipayParams",
+        "AlipayReusableParams",
+        "P24Params",
+        "VisaCheckoutParams",
+        "CompanyLegalEntityParams",
+        "LegalEntityParams"
+      ]
+    }
+  ],
+  "enums": [
+    {
+      "name": "GooglePayPriceStatus",
+      "slug": "googlepaypricestatus",
+      "members": [
+        {
+          "name": "NOT_CURRENTLY_KNOWN",
+          "value": "'NOT_CURRENTLY_KNOWN'",
+          "tags": [],
+          "docs": "Used for a capability check. Do not use this property if the transaction is processed in an EEA country."
+        },
+        {
+          "name": "ESTIMATED",
+          "value": "'ESTIMATED'",
+          "tags": [],
+          "docs": "Total price may adjust based on the details of the response, such as sales tax collected based on a billing address."
+        },
+        {
+          "name": "FINAL",
+          "value": "'FINAL'",
+          "tags": [],
+          "docs": "Total price doesn't change from the amount presented to the shopper."
+        }
+      ]
+    },
+    {
+      "name": "GooglePayAuthMethod",
+      "slug": "googlepayauthmethod",
+      "members": [
+        {
+          "name": "PAN_ONLY",
+          "value": "'PAN_ONLY'",
+          "tags": [],
+          "docs": "This authentication method is associated with payment cards stored on file with the user's Google Account.\nReturned payment data includes personal account number (PAN) with the expiration month and the expiration year."
+        },
+        {
+          "name": "CRYPTOGRAM_3DS",
+          "value": "'CRYPTOGRAM_3DS'",
+          "tags": [],
+          "docs": "This authentication method is associated with cards stored as Android device tokens.\nReturned payment data includes a 3-D Secure (3DS) cryptogram generated on the device."
+        }
+      ]
+    },
+    {
+      "name": "GooglePayBillingAddressFormat",
+      "slug": "googlepaybillingaddressformat",
+      "members": [
+        {
+          "name": "MIN",
+          "value": "'MIN'",
+          "tags": [],
+          "docs": "Name, country code, and postal code (default)."
+        },
+        {
+          "name": "FULL",
+          "value": "'FULL'",
+          "tags": [],
+          "docs": "Name, street address, locality, region, country code, and postal code."
+        }
+      ]
+    },
+    {
+      "name": "CardBrand",
+      "slug": "cardbrand",
+      "members": [
+        {
+          "name": "AMERICAN_EXPRESS",
+          "value": "'American Express'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DISCOVER",
+          "value": "'Discover'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "JCB",
+          "value": "'JCB'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DINERS_CLUB",
+          "value": "'Diners Club'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "VISA",
+          "value": "'Visa'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "MASTERCARD",
+          "value": "'MasterCard'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "UNIONPAY",
+          "value": "'UnionPay'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "UNKNOWN",
+          "value": "'Unknown'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    },
+    {
+      "name": "SourceType",
+      "slug": "sourcetype",
+      "members": [
+        {
+          "name": "ThreeDeeSecure",
+          "value": "'3ds'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "GiroPay",
+          "value": "'giropay'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "iDEAL",
+          "value": "'ideal'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SEPADebit",
+          "value": "'sepadebit'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "Sofort",
+          "value": "'sofort'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "AliPay",
+          "value": "'alipay'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "AliPayReusable",
+          "value": "'alipayreusable'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "P24",
+          "value": "'p24'",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "VisaCheckout",
+          "value": "'visacheckout'",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    }
+  ],
+  "typeAliases": [
+    {
+      "name": "SetPublishableKeyOptions",
+      "slug": "setpublishablekeyoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  key: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "AvailabilityResponse",
+      "slug": "availabilityresponse",
+      "docs": "",
+      "types": [
+        {
+          "text": "{ available: boolean }",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "FinalizeApplePayTransactionOptions",
+      "slug": "finalizeapplepaytransactionoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  success: boolean;\n}",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "PresentPaymentOptionsResponse",
+      "slug": "presentpaymentoptionsresponse",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  useGooglePay?: boolean;\n  useApplePay?: boolean;\n  paymentMethod?: PaymentMethod;\n}",
+          "complexTypes": [
+            "PaymentMethod"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ValidityResponse",
+      "slug": "validityresponse",
+      "docs": "",
+      "types": [
+        {
+          "text": "{ valid: boolean }",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "ValidateCardNumberOptions",
+      "slug": "validatecardnumberoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  number: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "ValidateExpiryDateOptions",
+      "slug": "validateexpirydateoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  exp_month: number;\n  exp_year: number;\n}",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "ValidateCVCOptions",
+      "slug": "validatecvcoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  cvc: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "CardBrandResponse",
+      "slug": "cardbrandresponse",
+      "docs": "",
+      "types": [
+        {
+          "text": "{ brand: CardBrand }",
+          "complexTypes": [
+            "CardBrand"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IdentifyCardBrandOptions",
+      "slug": "identifycardbrandoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  number: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "InitCustomerSessionParams",
+      "slug": "initcustomersessionparams",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  id: string;\n  object: 'ephemeral_key';\n  associated_objects: {\n    type: 'customer';\n    id: string;\n  }[];\n  created: number;\n  expires: number;\n  livemode: boolean;\n  secret: string;\n  apiVersion?: string;\n} & StripeAccountIdOpt",
+          "complexTypes": [
+            "StripeAccountIdOpt"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "StripeAccountIdOpt",
+      "slug": "stripeaccountidopt",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  /**\n   * Optional\n   * Used on Android only\n   */\n  stripeAccountId?: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    },
+    {
+      "name": "CustomerPaymentMethodsResponse",
+      "slug": "customerpaymentmethodsresponse",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  paymentMethods: PaymentMethod[];\n}",
+          "complexTypes": [
+            "PaymentMethod"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CreateSourceTokenOptions",
+      "slug": "createsourcetokenoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  type: SourceType;\n  params: SourceParams;\n}",
+          "complexTypes": [
+            "SourceType",
+            "SourceParams"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SourceParams",
+      "slug": "sourceparams",
+      "docs": "",
+      "types": [
+        {
+          "text": "ThreeDeeSecureParams",
+          "complexTypes": [
+            "ThreeDeeSecureParams"
+          ]
+        },
+        {
+          "text": "GiroPayParams",
+          "complexTypes": [
+            "GiroPayParams"
+          ]
+        },
+        {
+          "text": "iDEALParams",
+          "complexTypes": [
+            "iDEALParams"
+          ]
+        },
+        {
+          "text": "SEPADebitParams",
+          "complexTypes": [
+            "SEPADebitParams"
+          ]
+        },
+        {
+          "text": "SofortParams",
+          "complexTypes": [
+            "SofortParams"
+          ]
+        },
+        {
+          "text": "AlipayParams",
+          "complexTypes": [
+            "AlipayParams"
+          ]
+        },
+        {
+          "text": "AlipayReusableParams",
+          "complexTypes": [
+            "AlipayReusableParams"
+          ]
+        },
+        {
+          "text": "P24Params",
+          "complexTypes": [
+            "P24Params"
+          ]
+        },
+        {
+          "text": "VisaCheckoutParams",
+          "complexTypes": [
+            "VisaCheckoutParams"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CreatePiiTokenOptions",
+      "slug": "createpiitokenoptions",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  pii: string;\n} & StripeAccountIdOpt &\n  IdempotencyKeyOpt",
+          "complexTypes": [
+            "StripeAccountIdOpt",
+            "IdempotencyKeyOpt"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IdempotencyKeyOpt",
+      "slug": "idempotencykeyopt",
+      "docs": "",
+      "types": [
+        {
+          "text": "{\n  /**\n   * Optional\n   * Used on Android only\n   */\n  idempotencyKey?: string;\n}",
+          "complexTypes": []
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
